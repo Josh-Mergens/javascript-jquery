@@ -6,8 +6,14 @@ $(document).ready(function() {
       $('#gridContainer').append($gridBox);
     }
   })
-  $('.gridBox').hover(function() {
-    $(this).removeClass('gridBox');
-    $(this).addClass('fill')
+  $('#gridContainer').hover(function() {
+    $('.gridBox').mouseenter(function() {
+      $(this).addClass('fill');
+    });
+  })
+  $('#button').click(function() {
+    $('.gridBox').removeClass('fill');
+    
+
   })
 });
